@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" >
+    <title>???</title>
+</head>
+<style>
+    body{
+    background-color: red;
+    overflow: hidden;
+}
+h1{
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.center{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.bnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin: 0 20px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.img{
+    display: block;
+    background-image: url('https://uniquebox.vteximg.com.br/arquivos/ids/158482/pedido-de-namoro_front.png?v=636936274247270000');
+    background-size: cover;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 50%;
+}
+
+</style>
+<body>
+    <div class="center">
+        <h1>Quer namorar comigo ?</h1>
+    </div>
+    <div class="img"></div>
+    <div class="bnt">
+        <button id="sim"><a href="https://youtu.be/N_VhWg6_FAM?si=TBsNjlTNItYs8kBF">Sim</a></button>
+        <button id="nao">Nao</button>
+    </div>
+<script>
+   const naoBnt =  document.querySelector('#nao');
+   const simBnt = document.querySelector('#sim');
+   const img = document.querySelector('.img');
+   simBnt.addEventListener('mouseouver', ()=>{
+        img.style.backgroundImage =  "url('https://uniquebox.vteximg.com.br/arquivos/ids/158485/pedido-de-namoro_right.png?v=636936274608270000')"
+   });
+   simBnt.addEventListener('mouseout', ()=>{
+        img.style.backgroundImage = "url('https://uniquebox.vteximg.com.br/arquivos/ids/158482/pedido-de-namoro_front.png?v=636936274247270000')"
+   });
+   naoBnt.addEventListener('mouseover', ()=>{
+        naoBnt.style.position = "absolute";
+            naoBnt.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+            naoBnt.style.top = Math.floor(Math.random() * window.innerHeight) + "px"
+
+   });
+
+// feito pelo rickelme
+</script>
+</body>
+</html>
